@@ -42,7 +42,15 @@ consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 // Explanation: 
 
+/*`nestedfunction()` can access the variable `internal` because of closure.
+Closure means that the inner function has access to the outer functions variables this is a scope chain.
+closure has 3 scope chains.
+1. access to its own scope
+2. access to the outer functions vars
+3. access to the global vars
 
+since internal is not defined in nestedfunction()` it went up a level to the outer function and was able to resolve the variable.
+*/
 const external = "I'm outside the function";
 
 function myFunction() {
